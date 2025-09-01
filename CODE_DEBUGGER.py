@@ -2,6 +2,7 @@ from langchain_huggingface import ChatHuggingFace ,HuggingFaceEndpoint
 from dotenv import load_dotenv
 import streamlit as st
 from langchain_core.prompts import PromptTemplate, load_prompt
+import os
 load_dotenv()
 
 hf_token = st.secrets["api_keys"]["huggingface"]
@@ -10,7 +11,8 @@ st.write("Loaded key starts with:", hf_token[:6])
 
 input1 = HuggingFaceEndpoint(
     repo_id="openai/gpt-oss-120b",
-    task="text-generator"
+    task="text-generator",
+    api_key=hf_token 
 )
 
 model = ChatHuggingFace(llm=input1)
@@ -126,6 +128,7 @@ if st.button("Analyse"):
     result = model.invoke(prompt)
     st.write("Result: ")
     st.write(result.content)
+
 
 
 
