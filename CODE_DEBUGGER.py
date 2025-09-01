@@ -15,7 +15,7 @@ st.write("Loaded key starts with:", hf_token[:6])
 input1 = HuggingFaceEndpoint(
     repo_id="openai/gpt-oss-120b",
     task="text-generator",
-    api_key=hf_token 
+    model_kwargs={"api_key": hf_token}
 )
 
 model = ChatHuggingFace(llm=input1)
@@ -131,6 +131,7 @@ if st.button("Analyse"):
     result = model.invoke(prompt)
     st.write("Result: ")
     st.write(result.content)
+
 
 
 
