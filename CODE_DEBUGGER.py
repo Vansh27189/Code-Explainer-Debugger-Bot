@@ -5,7 +5,10 @@ from langchain_core.prompts import PromptTemplate, load_prompt
 import os
 load_dotenv()
 
-hf_token = st.secrets["HF_API_TOKEN"] 
+hf_token = st.secrets.get("HF_API_TOKEN")
+f hf_token is None:
+    st.error("HF_API_TOKEN is missing! Please add it in Streamlit Secrets.")
+    st.stop()
 
 st.write("Loaded key starts with:", hf_token[:6])
 
@@ -128,6 +131,7 @@ if st.button("Analyse"):
     result = model.invoke(prompt)
     st.write("Result: ")
     st.write(result.content)
+
 
 
 
