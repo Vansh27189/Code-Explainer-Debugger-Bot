@@ -20,13 +20,15 @@ st.write("Loaded key starts with:", hf_token[:6])
 input1 = HuggingFaceEndpoint(
     repo_id="meta-llama/Llama-3.1-8B-Instruct",
     # task="text-generator",
-    api_token=hf_token,
-    model_kwargs={
-            "temperature": 0.7,
-            "max_new_tokens": 1000,
-            "do_sample": True
-        }
+    huggingfacehub_api_token=hf_token,
+    temperature=0.7,
+    max_new_tokens=800,
+    do_sample=True,
+    repetition_penalty=1.1
+   
 )
+
+model = ChatHuggingFace(llm=input1)
 
 
 
@@ -138,6 +140,7 @@ if st.button("Analyse"):
     result = model.invoke(prompt)
     st.write("Result: ")
     st.write(result.content)
+
 
 
 
