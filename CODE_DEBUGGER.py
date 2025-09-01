@@ -18,7 +18,7 @@ if hf_token is None:
 st.write("Loaded key starts with:", hf_token[:6])
 
 input1 = HuggingFaceEndpoint(
-    repo_id="meta-llama/Llama-3.1-8B-Instruct",
+    repo_id="mistralai/Mistral-7B-Instruct-v0.1",
     task="text-generator",
     model_kwargs={"api_key": hf_token}
 )
@@ -133,6 +133,7 @@ if st.button("Analyse"):
     result = model.invoke(prompt)
     st.write("Result: ")
     st.write(result.content)
+
 
 
 
