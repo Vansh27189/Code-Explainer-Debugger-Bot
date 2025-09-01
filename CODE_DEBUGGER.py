@@ -5,7 +5,7 @@ from langchain_core.prompts import PromptTemplate, load_prompt
 import os
 load_dotenv()
 
-hf_token = st.secrets["api_keys"]["huggingface"]
+hf_token = st.secrets["HF_API_TOKEN"] 
 
 st.write("Loaded key starts with:", hf_token[:6])
 
@@ -128,6 +128,7 @@ if st.button("Analyse"):
     result = model.invoke(prompt)
     st.write("Result: ")
     st.write(result.content)
+
 
 
 
