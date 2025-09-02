@@ -18,7 +18,7 @@ if hf_token is None:
 st.write("Loaded key starts with:", hf_token[:6])
 
 input1 = HuggingFaceEndpoint(
-    repo_id="meta-llama/Llama-3.1-8B-Instruct",
+    repo_id="openai/gpt-oss-120b",
     # task="text-generator",
     huggingfacehub_api_token=hf_token,
     temperature=0.7,
@@ -140,6 +140,7 @@ if st.button("Analyse"):
     result = model.invoke(prompt)
     st.write("Result: ")
     st.write(result.content)
+
 
 
 
