@@ -15,7 +15,7 @@ if hf_token is None:
     st.error("HF_API_TOKEN is missing! Please add it in Streamlit Secrets.")
     st.stop()
 
-st.write("Loaded key starts with:", hf_token[:6])
+
 
 input1 = HuggingFaceEndpoint(
     repo_id="openai/gpt-oss-120b",
@@ -140,6 +140,7 @@ if st.button("Analyse"):
     result = model.invoke(prompt)
     st.write("Result: ")
     st.write(result.content)
+
 
 
 
