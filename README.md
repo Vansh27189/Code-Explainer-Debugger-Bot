@@ -11,10 +11,15 @@ Whether you’re a **beginner just learning**, an **intermediate developer seeki
 ## 🚀 Features
 
 ✅ **Explain Any Code** – Paste your code and get instant explanations.
+
 ✅ **Choose Explanation Style** – Beginner-friendly, step-by-step tutor, concise review, or deeply technical.
+
 ✅ **Custom Explanation Length** – Short summaries, multi-paragraph guides, or even **line-by-line breakdowns**.
+
 ✅ **Debugging & Fixes** – Detects errors, inefficiencies, and bad practices.
+
 ✅ **Alternative Approaches** – Suggests cleaner, optimized, or language-specific rewrites.
+
 ✅ **Real-World Analogies** – Complex programming concepts explained with simple analogies.
 
 
