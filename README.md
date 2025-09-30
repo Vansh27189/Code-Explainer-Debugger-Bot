@@ -33,8 +33,8 @@ Whether you’re a **beginner just learning**, an **intermediate developer seeki
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/yourusername/code-explainer-bot.git
-   cd code-explainer-bot
+   git clone https://github.com/Vansh27189/Code-Explainer-Debugger-Bot.git
+   cd Code-Explainer-Debugger-Bot
    ```
 
 2. Create and activate a virtual environment:
