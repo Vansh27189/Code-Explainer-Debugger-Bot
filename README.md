@@ -76,6 +76,8 @@ streamlit run app.py
 ```
 
 This will open the bot in your browser.
+               OR
+👉 **[Live Demo on Streamlit Cloud](https://codeexplainerbyvansh.streamlit.app/)**
 
 ---
 
